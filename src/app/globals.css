@@ -1,26 +1,54 @@
-@import "tailwindcss";
+@import 'tailwindcss';
 
-:root {
-  --background: #ffffff;
-  --foreground: #171717;
+@theme {
+  /* Fonte */
+  --font-display: Inter, system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial;
+  
+  /* Cores RV Tributos */
+  --color-rv-brown: oklch(34.571% 0.05086 83.706);
+  --color-rv-yellowOpaque: oklab(74.979% -0.00654 0.11643);
+  --color-rv-yellow: oklch(87.285% 0.14033 93.649);
+  --color-rv-green: oklch(35.263% 0.06559 170.24);
+  --color-rv-greenMusgo: oklch(22.161% 0.04402 158.333);
+  --color-rv-black: oklch(14.189% 0.02679 235.762);
+  --color-rv-white: oklch(97.015% 0.00011 271.152);
+  
+  /* Breakpoints Mobile-First */
+  --breakpoint-md: 768px;   /* Tablet */
+  --breakpoint-lg: 1024px;  /* Desktop */
+  --breakpoint-xl: 1280px;  /* Desktop grande */
 }
 
-@theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
+/* Base styles - Mobile First */
+body {
+  @apply bg-rv-white text-rv-black antialiased;
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
+/* Custom utilities */
+.rv-menu-shadow {
+  box-shadow: 0 6px 18px rgba(1, 11, 19, 0.08);
+}
+
+/* Container customizado (opcional) */
+.container-rv {
+  @apply w-full mx-auto px-5;
+}
+
+/* Breakpoints: */
+@media (min-width: 768px) {
+  .container-rv {
+    @apply px-8;
   }
 }
 
-body {
-  background: var(--background);
-  color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+@media (min-width: 1024px) {
+  .container-rv {
+    @apply px-12 max-w-7xl;
+  }
+}
+
+@media (min-width: 1280px) {
+  .container-rv {
+    @apply px-16;
+  }
 }
