@@ -84,7 +84,7 @@ export default function HeroMobile() {
                             */}
                             <div className="flex gap-1 mb-1">
                                 <div className="border-2 border-rv-green rounded-lg px-[0.4rem] py-1">
-                                    <span className="text-rv-green font-display text-[clamp(2rem,6vw,2.5rem)] font-bold leading-none">2</span>
+                                    <span className="text-rv-green font-display text-[clamp(2rem,8vw,2.5rem)] font-bold leading-none">2</span>
                                 </div>
                                 <div className="border-2 border-rv-green rounded-lg px-[0.4rem] py-1">
                                     <span className="text-rv-green font-display text-[clamp(2rem,8vw,2.5rem)] font-bold leading-none">0</span>
