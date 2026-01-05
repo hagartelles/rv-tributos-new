@@ -17,6 +17,10 @@
   --breakpoint-md: 768px;   /* Tablet */
   --breakpoint-lg: 1024px;  /* Desktop */
   --breakpoint-xl: 1280px;  /* Desktop grande */
+  
+  /* Header Height & Hero Height */
+  --header-height: 4rem;     /* 64px */
+  --hero-height: calc(100vh - var(--header-height));
 }
 
 /* Base styles - Mobile First */
@@ -27,6 +31,16 @@ body {
 /* Custom utilities */
 .rv-menu-shadow {
   box-shadow: 0 6px 18px rgba(1, 11, 19, 0.08);
+}
+
+/* Header height utility */
+.h-header {
+  height: var(--header-height);
+}
+
+/* Hero height utility */
+.h-hero {
+  height: var(--hero-height);
 }
 
 /* Container customizado (opcional) */

@@ -22,15 +22,15 @@ export default function HeaderMobile() {
   return (
     <>
       {/* Header fixo */}
-      <header className="fixed top-0 left-0 right-0 z-50 bg-rv-green rv-menu-shadow">
-        <div className="flex items-center justify-between px-4 py-3 sm:px-5 sm:py-4">
+      <header className="fixed top-0 left-0 right-0 z-50 bg-rv-green rv-menu-shadow h-header">
+        <div className="flex items-center justify-between h-full px-4 sm:px-5">
           {/* Logo */}
           <Link href="/" className="flex items-center" onClick={() => setIsMenuOpen(false)}>
             <Image
               src="/logo.png"
               alt="RV Tributos"
-              width={160}
-              height={80}
+              width={120}
+              height={40}
               priority
               className="h-14 w-auto sm:h-12"
             />
@@ -39,7 +39,7 @@ export default function HeaderMobile() {
           {/* Botão Hamburger */}
           <button
             onClick={toggleMenu}
-            className="relative w-14 h-14 rounded-full bg-rv-yellow flex items-center justify-center transition-transform hover:scale-105 active:scale-95 shadow-md"
+            className="relative w-12 h-12 rounded-full bg-rv-yellow flex items-center justify-center transition-transform hover:scale-105 active:scale-95 shadow-md"
             aria-label="Menu"
             aria-expanded={isMenuOpen}
           >
@@ -68,9 +68,10 @@ export default function HeaderMobile() {
       <div
         className={`fixed right-0 z-40 bg-rv-yellow shadow-lg transition-all duration-500 ease-in-out w-1/2 ${
           isMenuOpen
-            ? 'top-20 opacity-100 pointer-events-auto'
+            ? 'top-(--header-height) opacity-100 pointer-events-auto'
             : '-top-100 opacity-0 pointer-events-none'
         }`}
+        style={{ top: isMenuOpen ? 'var(--header-height)' : '-400px' }}
       >
         <nav className="flex flex-col">
           {menuItems.map((item, index) => (
@@ -98,7 +99,7 @@ export default function HeaderMobile() {
         <div
           className="fixed inset-0 bg-rv-black/20 z-30 backdrop-blur-[2px] transition-opacity duration-300"
           onClick={() => setIsMenuOpen(false)}
-          style={{ top: '64px' }}
+          style={{ top: 'var(--header-height)' }}
         />
       )}
     </>
