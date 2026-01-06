@@ -113,7 +113,7 @@ export default function HeroMobile() {
                 </div>
 
                 {/* Seção Inferior - Bem-vindo */}
-                <div className="absolute bottom-0 left-0 right-0 h-[30%] flex items-end justify-center pb-16">
+                <div className="absolute bottom-0 left-0 right-0 h-[30%] flex items-end justify-center pb-10">
                     <div className="text-left px-6">
                         <p className="text-rv-white font-display text-[clamp(1.5rem,6vw,2rem)] font-bold">
                             Bem-vindo à
