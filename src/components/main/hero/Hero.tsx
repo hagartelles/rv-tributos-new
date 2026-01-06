@@ -45,7 +45,7 @@ export default function HeroMobile() {
                     - h-[70%] = altura da seta (aumente/diminua aqui)
                     - top-[8%] = distância do topo (aumente para descer, diminua para subir)
                 */}
-                <div className="absolute top-[3%] top- -right-6 w-full h-[85%]">
+                <div className="absolute top-[2%] -right-6 w-full h-[85%]">
                     {/* Seta Amarela */}
                     <div className="relative w-full h-full">
                         <Image

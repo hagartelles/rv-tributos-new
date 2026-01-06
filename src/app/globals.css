@@ -20,7 +20,7 @@
   
   /* Header Height & Hero Height */
   --header-height: 4rem;     /* 64px */
-  --hero-height: calc(100dvh - var(--header-height));
+  --hero-height: calc(100vh - var(--header-height));
 }
 
 /* Base styles - Mobile First */
