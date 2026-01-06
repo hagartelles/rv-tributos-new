@@ -70,12 +70,8 @@ export default function HeroMobile() {
                                 Formato: text-[clamp(MÍNIMO, IDEAL, MÁXIMO)]
                             */}
                             <p className="text-rv-green font-display text-[clamp(0.8rem,3vw,1.5rem)] font-semibold">
-                                Nossos clientes
+                                Nossos clientes<br/>receberam mais de 
                             </p>
-                            <p className="text-rv-green font-display text-[clamp(0.8rem,3vw,1.5rem)] font-semibold">
-                                receberam mais de
-                            </p>
-
                             {/* 
                                 🎯 AJUSTE 4: TAMANHO DOS NÚMEROS
                                 - gap-1 = espaço entre os números
@@ -92,10 +88,9 @@ export default function HeroMobile() {
                             </div>
 
                             {/* 🎯 AJUSTE 5: TAMANHO "MILHÕES" */}
-                            <p className="text-rv-green font-display text-[clamp(1.5rem,6vw,2rem)] font-bold leading-none">
+                            <span className="text-rv-green font-display text-[clamp(1.5rem,6vw,2rem)] font-bold leading-none">
                                 MILHÕES
-                            </p>
-
+                            </span>
                             {/* 🎯 AJUSTE 6: TAMANHO "em restituições" */}
                             <p className="text-rv-green font-display text-[clamp(1rem,4vw,1.5rem)] font-semibold underline decoration-2 underline-offset-4 mb-2">
                                 em restituições

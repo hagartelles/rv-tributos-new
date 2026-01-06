@@ -33,6 +33,10 @@ body {
   box-shadow: 0 6px 18px rgba(1, 11, 19, 0.08);
 }
 
+p {
+  line-height: 1.2;
+}
+
 /* Header height utility */
 .h-header {
   height: var(--header-height);
