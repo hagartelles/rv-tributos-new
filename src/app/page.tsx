@@ -1,11 +1,13 @@
-import Header from "@/components/header/Header";
-import HeroMobile from "@/components/main/hero/HeroMobile";
+import HeaderRender from "@/components/header/HeaderRender";
+import HeroMobile from "@/components/main/hero/Hero";
+import Expertises from "@/components/main/sections/Expertises";
 
 export default function Home() {
   return (
   <>
-    <Header/>
+    <HeaderRender/>
     <HeroMobile/>
+    <Expertises/>
   </>
   );
 }
