@@ -9,7 +9,7 @@ export default function Expertises() {
             title: 'Indústria',
             image: '/mobile/gerente_joia.webp',
             description: 'Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat',
-            bgColor: 'bg-rv-yellow',
+            bgColor: 'bg-rv-yellow/90',
             textColor: 'text-rv-green',
         },
         {
