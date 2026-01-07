@@ -1,7 +1,6 @@
-'use client';
-
 import Image from 'next/image';
 import Link from 'next/link';
+import SectionLayout from '@/ui/SectionLayout';
 
 export default function Footer() {
     const socialLinks = [
@@ -42,27 +41,26 @@ export default function Footer() {
     ];
 
     return (
-        <footer className="relative w-full bg-rv-yellow overflow-hidden">
+        <footer className="relative w-full bg-[radial-gradient(ellipse_at_top_left,#ccb154_0%,#987f25_45%,#715e1d_100%)] overflow-hidden">
             {/* Conteúdo Principal */}
-            <div className="relative z-10 px-6 pt-12 pb-6">
-                {/* Logo */}
+            <div className="relative z-10 px-6 pt-6 pb-6">
+                {/* Logo - branca com filter */}
                 <div className="flex justify-center mb-6">
                     <Image
                         src="/logo.png"
                         alt="RV Tributos"
-                        width={180}
-                        height={60}
-                        className="h-16 w-auto"
+                        width={300}
+                        height={150}
+                        className=" w-auto"
+                        style={{ filter: 'brightness(0) invert(1)' }}
                     />
                 </div>
 
                 {/* Tagline */}
                 <div className="text-center mb-6">
                     <p className="text-rv-green font-display text-[clamp(0.875rem,3.5vw,1rem)] font-semibold">
-                        Soluções tributárias <span className="font-bold">sob medida</span>
-                    </p>
-                    <p className="text-rv-green font-display text-[clamp(0.875rem,3.5vw,1rem)] font-semibold">
-                        para o seu negócio.
+                        Soluções tributárias <span className="font-bold">sob medida</span><br />
+                        para o <span className="font-bold">seu negócio</span>.
                     </p>
                 </div>
 
@@ -82,42 +80,52 @@ export default function Footer() {
                     ))}
                 </div>
 
-                {/* Links Úteis */}
-                <div className="text-center mb-6">
-                    <h3 className="text-rv-green font-display text-[clamp(0.875rem,3.5vw,1rem)] font-bold mb-3">
-                        Links Úteis:
-                    </h3>
-                    <div className="flex flex-wrap justify-center gap-x-6 gap-y-2">
-                        {footerLinks.map((link, index) => (
-                            <Link
-                                key={link.href}
-                                href={link.href}
-                                className="text-rv-green font-display text-[clamp(0.75rem,3vw,0.875rem)] font-medium hover:underline transition-all duration-300"
-                            >
-                                {link.label}
-                            </Link>
-                        ))}
-                    </div>
-                </div>
+                {/* Div Amarela Fosca - Links Úteis e Contato */}
+                <div className="bg-[#caad48] p-6 mb-6 max-w-2xl mx-auto">
+                    <div className="grid grid-cols-2 gap-0 relative">
+                        {/* Links Úteis - Lado Esquerdo */}
+                        <div className="pr-4">
+                            <h3 className="text-rv-green font-display text-[clamp(0.875rem,3.5vw,1rem)] font-bold mb-4">
+                                Links Úteis:
+                            </h3>
+                            {/* Grid 2x2 dos links */}
+                            <div className="grid grid-cols-2 grid-rows-2 gap-0">
+                                {footerLinks.map((link) => (
+                                    <Link
+                                        key={link.href}
+                                        href={link.href}
+                                        className="text-rv-green font-display text-[clamp(0.75rem,3vw,0.875rem)] font-medium hover:underline transition-all duration-300 px-3 py-2 flex items-center"
+                                    >
+                                        {link.label}
+                                    </Link>
+                                ))}
+                            </div>
+                        </div>
 
-                {/* Contato */}
-                <div className="text-center mb-6">
-                    <h3 className="text-rv-green font-display text-[clamp(0.875rem,3.5vw,1rem)] font-bold mb-2">
-                        Contato:
-                    </h3>
-                    <a 
-                        href="tel:+554738423941"
-                        className="text-rv-green font-display text-[clamp(0.75rem,3vw,0.875rem)] font-medium hover:underline"
-                    >
-                        (47) 3842-3941
-                    </a>
+                        {/* Linha Divisória Verde Vertical */}
+                        <div className="absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 w-0.5 h-[80%] bg-rv-green"></div>
+
+                        {/* Contato - Lado Direito */}
+                        <div className="pl-4 flex flex-col justify-start">
+                            <h3 className="text-rv-green font-display text-[clamp(0.875rem,3.5vw,1rem)] font-bold mb-4">
+                                Contato:
+                            </h3>
+                            <a 
+                                href="tel:+554738423941"
+                                className="text-rv-green font-display text-[clamp(0.75rem,3vw,0.875rem)] font-medium hover:underline px-3"
+                            >
+                                (47) 3842-3941
+                            </a>
+                        </div>
+                    </div>
                 </div>
             </div>
 
             {/* Copyright */}
-            <div className="bg-rv-greenMusgo py-4 px-6">
-                <p className="text-rv-yellow font-display text-[clamp(0.625rem,2.5vw,0.75rem)] text-center">
-                    ©2023 RV Tributos. Todos os direitos reservados
+            <div className="py-4 px-6">
+                <SectionLayout.GradientLine/>
+                <p className="text-rv-white font-display text-[clamp(0.625rem,2.5vw,0.75rem)] text-center mt-4">
+                    ©2025 RV Tributos. Todos os direitos reservados
                 </p>
             </div>
         </footer>
