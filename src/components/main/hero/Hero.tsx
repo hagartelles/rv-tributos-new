@@ -5,7 +5,7 @@ import Link from 'next/link';
 
 export default function HeroMobile() {
     return (
-        <section className="relative h-hero w-full overflow-hidden mt-(--header-height)">
+        <section className="relative h-section w-full overflow-hidden mt-(--header-height)">
             {/* Background - Base para absolute positioning */}
             <div className="relative h-full w-full">
                 <Image

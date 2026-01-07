@@ -18,9 +18,9 @@
   --breakpoint-lg: 1024px;  /* Desktop */
   --breakpoint-xl: 1280px;  /* Desktop grande */
   
-  /* Header Height & Hero Height */
+  /* Header Height & Section Height */
   --header-height: 4rem;     /* 64px */
-  --hero-height: calc(100vh - var(--header-height));
+  --section-height: calc(100vh - var(--header-height));
 }
 
 /* Base styles - Mobile First */
@@ -42,9 +42,9 @@ p {
   height: var(--header-height);
 }
 
-/* Hero height utility */
-.h-hero {
-  height: var(--hero-height);
+/* Section height utility */
+.h-section {
+  height: var(--section-height);
 }
 
 /* Container customizado (opcional) */
