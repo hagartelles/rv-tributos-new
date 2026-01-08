@@ -43,21 +43,18 @@ export default function Header() {
             aria-label="Menu"
             aria-expanded={isMenuOpen}
           >
-            <div className="w-6 h-5 flex flex-col justify-between">
+            <div className="w-6 h-6 flex flex-col justify-center items-center gap-1.5 relative">
               <span
-                className={`block h-0.5 w-full bg-rv-green transition-all duration-300 ${
-                  isMenuOpen ? 'rotate-45 translate-y-2' : ''
-                }`}
+                className={`block h-0.5 w-full bg-rv-green transition-all duration-300 absolute ${isMenuOpen ? 'rotate-45' : '-translate-y-2'
+                  }`}
               />
               <span
-                className={`block h-0.5 w-full bg-rv-green transition-all duration-300 ${
-                  isMenuOpen ? 'opacity-0' : ''
-                }`}
+                className={`block h-0.5 w-full bg-rv-green transition-all duration-300 ${isMenuOpen ? 'opacity-0' : ''
+                  }`}
               />
               <span
-                className={`block h-0.5 w-full bg-rv-green transition-all duration-300 ${
-                  isMenuOpen ? '-rotate-45 -translate-y-2' : ''
-                }`}
+                className={`block h-0.5 w-full bg-rv-green transition-all duration-300 absolute ${isMenuOpen ? '-rotate-45' : 'translate-y-2'
+                  }`}
               />
             </div>
           </button>
@@ -66,11 +63,10 @@ export default function Header() {
 
       {/* Dropdown Menu - Desce do header, 50% largura, alinhado à direita */}
       <div
-        className={`fixed right-0 z-40 bg-rv-yellow shadow-lg transition-all duration-500 ease-in-out w-1/2 ${
-          isMenuOpen
+        className={`fixed right-0 z-40 bg-rv-yellow shadow-lg transition-all duration-500 ease-in-out w-1/2 ${isMenuOpen
             ? 'top-(--header-height) opacity-100 pointer-events-auto'
             : '-top-100 opacity-0 pointer-events-none'
-        }`}
+          }`}
         style={{ top: isMenuOpen ? 'var(--header-height)' : '-400px' }}
       >
         <nav className="flex flex-col">
@@ -79,11 +75,10 @@ export default function Header() {
               key={item.href}
               href={item.href}
               onClick={() => setIsMenuOpen(false)}
-              className={`px-6 py-4 text-rv-green font-display text-lg font-medium border-b border-rv-green/20 last:border-b-0 transition-all duration-300 hover:bg-rv-green hover:text-rv-yellow hover:pl-8 ${
-                isMenuOpen
+              className={`px-6 py-4 text-rv-green font-display text-lg font-medium border-b border-rv-green/20 last:border-b-0 transition-all duration-300 hover:bg-rv-green hover:text-rv-yellow hover:pl-8 ${isMenuOpen
                   ? 'opacity-100 translate-x-0'
                   : 'opacity-0 translate-x-4'
-              }`}
+                }`}
               style={{
                 transitionDelay: isMenuOpen ? `${index * 50}ms` : '0ms',
               }}

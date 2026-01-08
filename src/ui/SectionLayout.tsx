@@ -43,7 +43,7 @@ export default function SectionLayout({
                         src="/marca-agua.png"
                         alt=""
                         fill
-                        className="object-contain object-right"
+                        className="object-contain object-right [&_path]:fill-[#c9cfcd]"
                     />
                 </div>
             )}
@@ -77,7 +77,7 @@ SectionLayout.Title = function SectionTitle({ children, className = '' }: Sectio
 // Sub-componente: Subtítulo/texto antes ou depois do título
 SectionLayout.Subtitle = function SectionSubtitle({ children, className = '' }: SectionSubtitleProps) {
     return (
-        <p className={`text-rv-green font-display text-[clamp(0.875rem,3.5vw,1.125rem)] font-medium ${className}`}>
+        <p className={`text-rv-green font-display text-[clamp(1rem,3.5vw,1.5rem)] font-medium ${className}`}>
             {children}
         </p>
     );

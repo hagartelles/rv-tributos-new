@@ -43,7 +43,7 @@ export default function Footer() {
     return (
         <footer className="relative w-full bg-[radial-gradient(ellipse_at_top_left,#ccb154_0%,#987f25_45%,#715e1d_100%)] overflow-hidden">
             {/* Conteúdo Principal */}
-            <div className="relative z-10 px-6 pt-6 pb-6">
+            <div className="relative z-10 px-4 py-4">
                 {/* Logo - branca com filter */}
                 <div className="flex justify-center mb-6">
                     <Image
@@ -81,20 +81,20 @@ export default function Footer() {
                 </div>
 
                 {/* Div Amarela Fosca - Links Úteis e Contato */}
-                <div className="bg-[#caad48] p-6 mb-6 max-w-2xl mx-auto">
+                <div className="bg-[#caad48] p-2 mb-6 max-w-2xl mx-auto">
                     <div className="grid grid-cols-2 gap-0 relative">
                         {/* Links Úteis - Lado Esquerdo */}
-                        <div className="pr-4">
+                        <div className="">
                             <h3 className="text-rv-green font-display text-[clamp(0.875rem,3.5vw,1rem)] font-bold mb-4">
                                 Links Úteis:
                             </h3>
                             {/* Grid 2x2 dos links */}
-                            <div className="grid grid-cols-2 grid-rows-2 gap-0">
+                            <div className="grid grid-cols-[auto_auto] grid-rows-2 gap-x-1">
                                 {footerLinks.map((link) => (
                                     <Link
                                         key={link.href}
                                         href={link.href}
-                                        className="text-rv-green font-display text-[clamp(0.75rem,3vw,0.875rem)] font-medium hover:underline transition-all duration-300 px-3 py-2 flex items-center"
+                                        className="text-rv-green font-display text-[clamp(0.75rem,1vw,1rem)] font-medium hover:underline transition-all duration-300 py-2 flex items-center text-nowrap"
                                     >
                                         {link.label}
                                     </Link>
@@ -103,7 +103,7 @@ export default function Footer() {
                         </div>
 
                         {/* Linha Divisória Verde Vertical */}
-                        <div className="absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 w-0.5 h-[80%] bg-rv-green"></div>
+                        <div className="absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 w-0.5 h-[90%] bg-rv-green"></div>
 
                         {/* Contato - Lado Direito */}
                         <div className="pl-4 flex flex-col justify-start">

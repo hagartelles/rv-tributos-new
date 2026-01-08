@@ -32,7 +32,7 @@ export default function Expertises() {
         <Section>
             {/* Header usando compound components */}
             <Section.Header>
-                <Section.Subtitle className="mb-2">
+                <Section.Subtitle className="">
                     Soluções Tributárias para
                 </Section.Subtitle>
                 
