@@ -81,20 +81,20 @@ export default function Footer() {
                 </div>
 
                 {/* Div Amarela Fosca - Links Úteis e Contato */}
-                <div className="bg-[#caad48] p-2 mb-6 max-w-2xl mx-auto">
+                <div className="bg-[#caad48] py-2 px-4 mb-6 max-w-2xl mx-auto">
                     <div className="grid grid-cols-2 gap-0 relative">
                         {/* Links Úteis - Lado Esquerdo */}
                         <div className="">
-                            <h3 className="text-rv-green font-display text-[clamp(0.875rem,3.5vw,1rem)] font-bold mb-4">
+                            <h3 className="text-rv-green font-display text-[clamp(0.875rem,3.5vw,1rem)] font-bold mb-2">
                                 Links Úteis:
                             </h3>
                             {/* Grid 2x2 dos links */}
-                            <div className="grid grid-cols-[auto_auto] grid-rows-2 gap-x-1">
+                            <div className="grid grid-cols-[auto_auto] grid-rows-2">
                                 {footerLinks.map((link) => (
                                     <Link
                                         key={link.href}
                                         href={link.href}
-                                        className="text-rv-green font-display text-[clamp(0.75rem,1vw,1rem)] font-medium hover:underline transition-all duration-300 py-2 flex items-center text-nowrap"
+                                        className="text-rv-green font-display text-[clamp(0.75rem,1vw,1rem)] font-medium hover:underline transition-all duration-300 flex items-center text-nowrap"
                                     >
                                         {link.label}
                                     </Link>
@@ -106,16 +106,16 @@ export default function Footer() {
                         <div className="absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 w-0.5 h-[90%] bg-rv-green"></div>
 
                         {/* Contato - Lado Direito */}
-                        <div className="pl-4 flex flex-col justify-start">
-                            <h3 className="text-rv-green font-display text-[clamp(0.875rem,3.5vw,1rem)] font-bold mb-4">
+                        <div className="px-4 flex flex-col justify-start">
+                            <h3 className="text-rv-green font-display text-[clamp(0.875rem,3.5vw,1rem)] font-bold mb-2">
                                 Contato:
                             </h3>
-                            <a 
+                            <Link 
                                 href="tel:+554738423941"
-                                className="text-rv-green font-display text-[clamp(0.75rem,3vw,0.875rem)] font-medium hover:underline px-3"
+                                className="text-rv-green font-display text-[clamp(0.75rem,1vw,1rem)] font-medium hover:underline"
                             >
                                 (47) 3842-3941
-                            </a>
+                            </Link>
                         </div>
                     </div>
                 </div>

@@ -22,8 +22,8 @@ export default function Contact() {
                             className="group relative inline-flex items-center justify-center gap-3 font-display font-bold px-6 py-2 rounded-full shadow-[0_6px_12px_rgba(0,0,0,0.3),inset_0_1px_0_0_rgba(255,223,100,0.8)] bg-[linear-gradient(180deg,#F4D03F_0%,#E8C547_50%,#C9A347_100%)] text-rv-green transform-gpu transition-all duration-300 ease-out hover:scale-105 hover:shadow-[0_8px_16px_rgba(0,0,0,0.4),inset_0_1px_0_0_rgba(255,223,100,0.8)] active:scale-95 antialiased"
                             style={{
                                 fontSize: '1.25rem',
-                                backfaceVisibility: 'hidden', // Ajuda muito a evitar o blur no Chrome/Safari
-                                WebkitFontSmoothing: 'antialiased', // Garante texto nítido
+                                backfaceVisibility: 'hidden', 
+                                WebkitFontSmoothing: 'antialiased', 
                             }}
                         >
                             {/* Gradiente overlay para brilho */}

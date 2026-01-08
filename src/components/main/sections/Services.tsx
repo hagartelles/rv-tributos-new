@@ -61,7 +61,7 @@ export default function Services() {
                 <SectionLayout.GradientLine />
             </SectionLayout.Header>
 
-            <SectionLayout.Content className="mt-12">
+            <SectionLayout.Content className="">
                 {/* Grid 3 linhas x 2 colunas */}
                 <div className="grid grid-cols-2 grid-rows-3 gap-6 max-w-3xl mx-auto">
                     {services.map((service) => (
