@@ -1,8 +1,12 @@
 @import 'tailwindcss';
 
 @theme {
-  /* Fonte */
-  --font-display: Inter, system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial;
+  /* Fontes */
+  /* Classe: font-italianno */
+  --font-italianno: var(--font-italianno), cursive;
+
+  /* Classe: font-display */
+  --font-display: var(--font-telex), sans-serif;
   
   /* Cores RV Tributos */
   --color-rv-brown: oklch(34.571% 0.05086 83.706);

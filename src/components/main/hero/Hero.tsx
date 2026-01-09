@@ -133,7 +133,7 @@ useEffect(() => {
 
                             <Link
                                 href="/contato"
-                                className="bg-rv-green text-rv-white font-display font-bold text-[clamp(0.8rem,3vw,1rem)] px-4 py-2 rounded-lg shadow-lg transition-all duration-300 hover:bg-rv-greenMusgo hover:scale-105 active:scale-95"
+                                className="bg-rv-green text-rv-white font-display text-[clamp(0.8rem,3vw,1rem)] px-4 py-2 rounded-lg shadow-lg transition-all duration-300 hover:bg-rv-greenMusgo hover:scale-105 active:scale-95"
                             >
                                 Saiba Como
                             </Link>
@@ -144,10 +144,10 @@ useEffect(() => {
                 {/* Seção Inferior - Bem-vindo */}
                 <div className="absolute bottom-0 left-0 right-0 h-[30%] flex items-end justify-center pb-10 z-0">
                     <div className="text-left px-6">
-                        <p className="text-rv-white font-display text-[clamp(1.5rem,6vw,2rem)] font-bold">
+                        <p className="text-rv-white font-display text-[clamp(1rem,4vw,1.5rem)] ">
                             Bem-vindo à
                         </p>
-                        <h1 className="text-rv-yellow font-display text-[clamp(2.5rem,10vw,4.5rem)] font-bold leading-tight">
+                        <h1 className="text-rv-yellow font-italianno text-[clamp(4rem,10vw,5rem)] leading-tight">
                             Rozin e Viesa
                         </h1>
                         <p className="text-rv-white font-display text-[clamp(0.75rem,1rem,2rem)] max-w-3/4 ">
