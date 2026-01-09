@@ -67,7 +67,7 @@ useEffect(() => {
                 {/* --- TRIÂNGULO VERDE (Esquerda) --- */}
                 <div
                     className={`absolute top-0 left-0 bg-rv-green/50 transition-transform duration-1000 ease-out z-10
-                        ${isLoaded ? 'translate-y-0' : '-translate-y-full'} 
+                        ${isLoaded ? 'translate-y-0 translate-x-0' : '-translate-y-full translate-x-full'} 
                     `}
                     style={{
                         width: '85%',
@@ -86,7 +86,7 @@ useEffect(() => {
 
                 {/* --- SETA AMARELA (Direita) --- */}
                 <div className={`absolute top-[2%] -right-6 w-full h-[85%] transition-transform duration-1000 ease-out z-10
-                    ${isLoaded ? 'translate-y-0' : 'translate-y-[150%]'}
+                    ${isLoaded ? 'translate-y-0 translate-x-0' : 'translate-y-[150%] -translate-x-[150%]'}
                 `}>
                     {/* Seta Amarela Imagem */}
                     <div className="relative w-full h-full">
