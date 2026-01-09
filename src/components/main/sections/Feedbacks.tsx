@@ -42,7 +42,7 @@ export default function Feedbacks() {
                 <SectionLayout.GradientLine />
             </SectionLayout.Header>
 
-            <SectionLayout.Content className="flex flex-col gap-6">
+            <SectionLayout.Content className="flex flex-col gap-6 mb-6">
                 {testimonials.map((testimonial) => (
                     <div
                         key={testimonial.id}
@@ -50,7 +50,7 @@ export default function Feedbacks() {
                     >
                         {/* Logo da empresa */}
                         <div className="shrink-0">
-                            <div className="w-20 h-20 rounded-full overflow-hidden relative">
+                            <div className="w-20 h-20 rounded-full overflow-hidden relative ">
                                 <Image
                                     src={testimonial.logo}
                                     alt={testimonial.author}
@@ -61,7 +61,7 @@ export default function Feedbacks() {
                         </div>
 
                         {/* Conteúdo do depoimento */}
-                        <div className="pl-6">
+                        <div className="px-6">
                             {/* Aspas decorativas */}
                             <div className="text-rv-yellow font-bold text-6xl leading-none h-8 flex items-start mb-2" style={{ lineHeight: '1' }}>
                                 “

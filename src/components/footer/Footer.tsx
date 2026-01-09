@@ -85,7 +85,7 @@ export default function Footer() {
                     <div className="grid grid-cols-2 gap-0 relative">
                         {/* Links Úteis - Lado Esquerdo */}
                         <div className="">
-                            <h3 className="text-rv-green font-display text-[clamp(0.875rem,3.5vw,1rem)] font-bold mb-2">
+                            <h3 className="text-rv-green font-display text-[clamp(0.875rem,3.5vw,1rem)] font-bold mb-1">
                                 Links Úteis:
                             </h3>
                             {/* Grid 2x2 dos links */}
@@ -107,7 +107,7 @@ export default function Footer() {
 
                         {/* Contato - Lado Direito */}
                         <div className="px-4 flex flex-col justify-start">
-                            <h3 className="text-rv-green font-display text-[clamp(0.875rem,3.5vw,1rem)] font-bold mb-2">
+                            <h3 className="text-rv-green font-display text-[clamp(0.875rem,3.5vw,1rem)] font-bold mb-1">
                                 Contato:
                             </h3>
                             <Link 
