@@ -11,9 +11,12 @@ export default function HeroMobile() {
     // Estado para o contador numérico (0 a 20)
     const [count, setCount] = useState(0);
 
-    useEffect(() => {
-        // Ativa a animação visual logo após montar
-        setIsLoaded(true);
+useEffect(() => {
+        const startTimer = setTimeout(() => {
+            setIsLoaded(true);
+        }, 200); 
+
+        return () => clearTimeout(startTimer);
     }, []);
 
     // Efeito separado para controlar a contagem numérica
