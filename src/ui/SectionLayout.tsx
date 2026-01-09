@@ -35,7 +35,7 @@ export default function SectionLayout({
     showWatermark = true
 }: SectionProps) {
     return (
-        <section className={`relative w-full mt-1 pt-10 min-h-section bg-rv-white overflow-hidden ${className}`}>
+        <section className={`relative w-full mt-1 pt-10  bg-rv-white overflow-hidden ${className}`}>
             {/* Marca d'água - Background */}
             {showWatermark && (
                 <div className={`absolute inset-0 pointer-events-none `}>

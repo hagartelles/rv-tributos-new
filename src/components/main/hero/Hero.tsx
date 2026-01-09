@@ -47,7 +47,7 @@ useEffect(() => {
     const units = count % 10;
 
     return (
-        <section className="relative h-section w-full overflow-hidden mt-(--header-height)">
+        <section className="relative h-hero-section w-full overflow-hidden mt-(--header-height)">
             {/* Background - Base para absolute positioning */}
             <div className="relative h-full w-full">
                 <Image

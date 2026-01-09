@@ -50,6 +50,9 @@ p {
   height: var(--header-height);
 }
 
+.h-hero-section {
+  height: calc(100dvh - var(--header-height)); /* Usa 100dvh para melhor suporte em dispositivos móveis */
+}
 /* Section height utility */
 .h-section {
   height: var(--section-height);
