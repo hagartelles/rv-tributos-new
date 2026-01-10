@@ -66,10 +66,10 @@ export default function Services() {
         <SectionLayout className='min-h-section'>
             <SectionLayout.Header>
                 <SectionLayout.Subtitle className="">
-                   Nossos 
+                   Nossas 
                 </SectionLayout.Subtitle>
                 <SectionLayout.Title>
-                    Serviços
+                    Soluções
                 </SectionLayout.Title>
                 
                 <SectionLayout.GradientLine />

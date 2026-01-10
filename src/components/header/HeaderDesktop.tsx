@@ -11,9 +11,9 @@ export default function HeaderDesktop() {
 
   const menuItems = [
     { label: 'Início', href: '/' },
-    { label: 'Serviços', href: '/servicos' },
-    { label: 'Sobre', href: '/sobre' },
-    { label: 'Contato', href: '/contato' },
+    { label: 'Nosso Público', href: '/servicos' },
+    { label: 'Serviços', href: '/sobre' },
+    { label: 'Sobre nós', href: '#sobre' },
   ];
 
   const isActive = (href: string) => pathname === href;
@@ -69,7 +69,7 @@ export default function HeaderDesktop() {
               href="/contato"
               className="ml-2 md:ml-4 px-4 py-2 md:px-6 md:py-3 bg-rv-yellow text-rv-green font-display font-bold text-sm md:text-base rounded-full transition-all duration-300 hover:bg-rv-white hover:shadow-lg hover:scale-105 active:scale-95"
             >
-              Fale Conosco
+              Contato
             </Link>
           </nav>
         </div>

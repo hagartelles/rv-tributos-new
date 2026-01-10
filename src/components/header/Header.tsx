@@ -13,10 +13,10 @@ export default function Header() {
 
   const menuItems = [
     { label: 'Início', href: '/' },
-    { label: 'Serviços', href: '/servicos' },
-    { label: 'Sobre Nós', href: '/sobre' },
-    { label: 'Blog', href: '/blog' },
-    { label: 'Contato', href: '/contato' },
+    { label: 'Nosso Público', href: '/servicos' },
+    { label: 'Serviços', href: '/sobre' },
+    { label: 'Sobre nós', href: '#sobre' },
+    { label: 'Contato', href: '' },
   ];
 
   return (
