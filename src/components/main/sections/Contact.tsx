@@ -8,16 +8,17 @@ export default function Contact() {
         <section className="relative w-full py-16 bg-[linear-gradient(180deg,var(--color-rv-green)_0%,var(--color-rv-greenMusgo)_100%)] overflow-hidden">
             {/* Content */}
             <div className="relative px-6">
-                <div className="max-w-md w-full mx-auto">
+                <div className="max-w-md w-full mx-auto md:max-w-6xl md:flex md:items-center md:justify-evenly md:gap-8">
+                    
                     {/* Headline */}
-                    <h2 className="text-rv-white font-display text-[clamp(1.75rem,7vw,2.5rem)] font-bold leading-tight mb-8 w-fit mx-auto text-left">
+                    <h2 className="text-rv-white font-display text-[clamp(1.75rem,7vw,2.5rem)] font-bold leading-tight mb-8 w-fit mx-auto text-left md:mb-0 md:mx-0">
                         Descubra quanto <br />
                         sua empresa pode <br />
                         <span className="text-rv-yellow">RECUPERAR!</span>
                     </h2>
                     
                     {/* CTA Button Container */}
-                    <div className="inline-block w-full text-center">
+                    <div className="inline-block w-full text-center md:w-auto">
                         <Link
                             href="/contato"
                             className="group relative inline-flex items-center justify-center shadow-[0_6px_12px_rgba(0,0,0,0.3)] transition-transform duration-300 ease-in-out hover:scale-105 transform-gpu will-change-transform antialiased"
