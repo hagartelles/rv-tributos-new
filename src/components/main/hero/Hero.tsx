@@ -37,7 +37,7 @@ export default function Hero() {
     const units = count % 10;
 
     return (
-        <section className="relative h-hero-section w-full overflow-hidden mt-(--header-height)">
+        <section id='inicio' className="relative h-hero-section w-full overflow-hidden mt-(--header-height)">
             {/* Background */}
             <div className="relative h-full w-full">
                 <Image src="/background.webp" alt="Background" fill className="object-cover" priority />
@@ -97,7 +97,7 @@ export default function Hero() {
                 {/* --- BEM-VINDO (Rodapé) --- */}
                 <div className="absolute bottom-0 left-0 right-0 h-[30%] flex items-end justify-center pb-10 z-0 md:pb-16 lg:pb-20">
                     <div className="text-left px-6 md:text-center md:max-w-4xl">
-                        <p className="text-rv-white font-display font-bold text-[clamp(1rem,4vw,1.5rem)] md:text-2xl lg:text-3xl">Bem-vindo à</p>
+                        <p className="text-rv-white font-display text-[clamp(1rem,4vw,1.5rem)] md:text-2xl lg:text-3xl">Bem-vindo à</p>
                         <h1 className="text-rv-yellow font-italianno leading-tight text-[clamp(4rem,10vw,5rem)] md:text-7xl lg:text-8xl xl:text-9xl">Rozin e Viesa</h1>
                         <p className="text-rv-white font-display max-w-3/4 text-[clamp(0.75rem,1rem,2rem)] md:text-lg md:max-w-2xl md:mx-auto lg:text-xl">
                             Resultados tangíveis, economias reais! Nossa consultoria tributária é projetada para aumentar sua rentabilidade enquanto garantimos conformidade total com a legislação.

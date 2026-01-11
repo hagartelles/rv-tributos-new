@@ -10,9 +10,9 @@ export default function HeaderDesktop() {
   const [hoveredItem, setHoveredItem] = useState<string | null>(null);
 
   const menuItems = [
-    { label: 'Início', href: '/' },
-    { label: 'Nosso Público', href: '/servicos' },
-    { label: 'Serviços', href: '/sobre' },
+    { label: 'Início', href: '#inicio' },
+    { label: 'Nosso Público', href: '#nosso-publico' },
+    { label: 'Serviços', href: '#servicos' },
     { label: 'Sobre nós', href: '#sobre' },
   ];
 

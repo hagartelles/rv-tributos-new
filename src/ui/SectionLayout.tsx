@@ -6,6 +6,8 @@ interface SectionProps {
     className?: string;
     showWatermark?: boolean;
     watermarkOpacity?: string;
+    contentClassName?: string;
+    name?: string;
 }
 
 interface SectionHeaderProps {
@@ -32,10 +34,12 @@ interface SectionContentProps {
 export default function SectionLayout({ 
     children, 
     className = '', 
-    showWatermark = true
+    showWatermark = true,
+    contentClassName ='',
+    name = ''
 }: SectionProps) {
     return (
-        <section className={`relative w-full mt-1 pt-10  bg-rv-white overflow-hidden ${className}`}>
+        <section id={name} className={`relative w-full mt-1 pt-10  bg-rv-white overflow-hidden ${className}`}>
             {/* Marca d'água - Background */}
             {showWatermark && (
                 <div className={`absolute inset-0 pointer-events-none `}>
@@ -49,7 +53,7 @@ export default function SectionLayout({
             )}
 
             {/* Content */}
-            <div className="relative z-10 px-6">
+            <div className={`relative z-10  ${contentClassName}`}>
                 {children}
             </div>
         </section>
@@ -59,7 +63,7 @@ export default function SectionLayout({
 // Sub-componente: Header com título e linha
 SectionLayout.Header = function SectionHeader({ children, className = '' }: SectionHeaderProps) {
     return (
-        <div className={`text-center mb-8 ${className}`}>
+        <div className={` text-center md:text-left mb-8 ${className}`}>
             {children}
         </div>
     );

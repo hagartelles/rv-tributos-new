@@ -29,7 +29,7 @@ export default function Feedbacks() {
     ];
 
     return (
-        <SectionLayout>
+        <SectionLayout contentClassName='px-10'>
             <SectionLayout.Header>
                 <SectionLayout.Title>
                     Feedbacks

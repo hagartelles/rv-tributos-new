@@ -12,9 +12,9 @@ export default function Header() {
   };
 
   const menuItems = [
-    { label: 'Início', href: '/' },
-    { label: 'Nosso Público', href: '/servicos' },
-    { label: 'Serviços', href: '/sobre' },
+    { label: 'Início', href: '#inicio' },
+    { label: 'Nosso Público', href: '#nosso-publico' },
+    { label: 'Serviços', href: '#servicos' },
     { label: 'Sobre nós', href: '#sobre' },
     { label: 'Contato', href: '' },
   ];

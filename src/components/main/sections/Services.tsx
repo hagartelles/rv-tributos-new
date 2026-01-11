@@ -63,7 +63,7 @@ export default function Services() {
     };
 
     return (
-        <SectionLayout className='min-h-section'>
+        <SectionLayout name='servicos' className='min-h-section px-6'>
             <SectionLayout.Header>
                 <SectionLayout.Subtitle className="">
                    Nossas 

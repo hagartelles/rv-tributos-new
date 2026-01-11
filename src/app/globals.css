@@ -36,6 +36,11 @@
 }
 
 /* Base styles - Mobile First */
+
+html {
+  scroll-behavior: smooth;
+}
+
 body {
   @apply bg-rv-white text-rv-black antialiased;
 }
@@ -84,4 +89,8 @@ p {
   .container-rv {
     @apply px-16;
   }
+}
+
+section[id], div[id] {
+  scroll-margin-top: calc(var(--header-height));
 }

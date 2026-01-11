@@ -121,7 +121,7 @@ export default function Footer() {
             </div>
 
             {/* Copyright */}
-            <div className="py-4 px-6">
+            <div className="py-4 ">
                 <SectionLayout.GradientLine/>
                 <p className="text-rv-white font-display text-[clamp(0.625rem,2.5vw,0.75rem)] text-center mt-4">
                     ©2025 RV Tributos. Todos os direitos reservados
