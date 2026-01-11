@@ -6,7 +6,7 @@ import Section from '@/ui/SectionLayout';
 
 export default function Expertises() {
     const [currentIndex, setCurrentIndex] = useState(0);
-    
+
     // Estados para controle de pausa
     const [isHovered, setIsHovered] = useState(false);
     const [isActived, setIsActived] = useState(false); // Preparado para uso futuro
@@ -63,16 +63,20 @@ export default function Expertises() {
 
     return (
         <Section name='nosso-publico'>
-            <Section.Header className='px-6'>
-                <Section.Subtitle>Soluções Tributárias para</Section.Subtitle>
-                <div className="md:flex justify-start items-baseline gap-2">
-                    <Section.Title>TODOS</Section.Title>
-                    <Section.Subtitle className='md:text-4xl'>os modelos de negócio!</Section.Subtitle>
-                </div>
-                <Section.GradientLine />
-            </Section.Header>
+            <Section.Container>
+                <Section.Header className='px-6'>
+                    <Section.Subtitle>Soluções Tributárias para</Section.Subtitle>
+                    <div className="md:flex justify-start items-baseline gap-2">
+                        <Section.Title>TODOS</Section.Title>
+                        <Section.Subtitle className='md:text-4xl'>os modelos de negócio!</Section.Subtitle>
+                    </div>
+                    <Section.GradientLine />
+                </Section.Header>
+            </Section.Container>
 
-            <Section.Content className="mt-12 w-full "> 
+
+            <Section.Content className="mt-12 w-full ">
+
 
                 {/* ============================================================
                     VERSÃO MOBILE (Cards)
@@ -99,7 +103,7 @@ export default function Expertises() {
                 {/* ============================================================
                     VERSÃO DESKTOP (Carrossel)
                    ============================================================ */}
-                <div 
+                <div
                     className="hidden md:block relative w-full h-150 lg:h-175 overflow-hidden group"
                     onMouseEnter={() => setIsHovered(true)} // Pausa ao entrar
                     onMouseLeave={() => setIsHovered(false)} // Retoma ao sair
@@ -180,11 +184,10 @@ export default function Expertises() {
                             <button
                                 key={idx}
                                 onClick={() => goToSlide(idx)}
-                                className={`w-3 h-3 rounded-full transition-colors duration-300 shadow-sm ${
-                                    idx === currentIndex
+                                className={`w-3 h-3 rounded-full transition-colors duration-300 shadow-sm ${idx === currentIndex
                                         ? 'bg-rv-green'
                                         : 'bg-white/50 hover:bg-white'
-                                }`}
+                                    }`}
                                 aria-label={`Ir para slide ${idx + 1}`}
                             />
                         ))}

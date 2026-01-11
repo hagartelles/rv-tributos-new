@@ -31,15 +31,15 @@ interface SectionContentProps {
 }
 
 // Componente principal
-export default function SectionLayout({ 
-    children, 
-    className = '', 
+export default function SectionLayout({
+    children,
+    className = '',
     showWatermark = true,
-    contentClassName ='',
+    contentClassName = '',
     name = ''
 }: SectionProps) {
     return (
-        <section id={name} className={`relative w-full mt-1 pt-10  bg-rv-white overflow-hidden ${className}`}>
+        <section id={name} className={`relative w-full mt-10 bg-rv-white overflow-hidden ${className}`}>
             {/* Marca d'água - Background */}
             {showWatermark && (
                 <div className={`absolute inset-0 pointer-events-none `}>
@@ -60,6 +60,14 @@ export default function SectionLayout({
     );
 }
 
+//Sub-componente: Container interno para centralizar conteúdo
+SectionLayout.Container = function SectionContainer({ children, className = '' }: SectionProps) {
+    return (
+        <div className='mx-auto px-10 md:max-w-4xl lg:max-w-6xl xl:max-w-7xl'>
+            {children}
+        </div>
+    );
+};
 // Sub-componente: Header com título e linha
 SectionLayout.Header = function SectionHeader({ children, className = '' }: SectionHeaderProps) {
     return (

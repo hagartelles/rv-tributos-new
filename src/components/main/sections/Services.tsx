@@ -12,7 +12,7 @@ export default function Services() {
         {
             id: 1,
             name: 'Revisão Fiscal',
-            title: <>Revisão <br/>Fiscal</>,
+            title: <>Revisão <br />Fiscal</>,
             icon: '/revisao_fiscal.svg',
             // Adicionei este campo para o texto do conteúdo
             description: 'É o “carro chefe” da RV Tributos. Consiste na revisão de toda a carga tributária (federal, estadual e municipal) incidente sobre a operação da empresa, para identificar possíveis créditos que não tenham sido aproveitados.A revisão fiscal tem como objetivo a recuperação de tributos recolhidos a maior nos últimos 05 anos, bem como a otimização da carga tributária futura da empresa.'
@@ -20,14 +20,14 @@ export default function Services() {
         {
             id: 2,
             name: 'Planejamento Tributário',
-            title: <>Planejamento <br/> Tributário</>,
+            title: <>Planejamento <br /> Tributário</>,
             icon: '/planejamento_tributario.svg',
             description: 'Análise de toda a estrutura comercial, logística e operacional da empresa, para apontar medidas que reduzam a carga tributária incidente, tal como o apontamento do regime de tributação mais vantajoso; eventuais benefícios fiscais que possam ser utilizados; sugestões de melhorias logísticas e na aquisição de produtos/serviços, além de possíveis alterações societárias para organização e proteção patrimonial.'
         },
         {
             id: 3,
             name: 'Incentivos Fiscais',
-            title: <>Incentivos <br/>Fiscais</>,
+            title: <>Incentivos <br />Fiscais</>,
             icon: '/incentivos_fiscais.svg',
             description: 'Este serviço é essencial para agregar inteligência tributária à operação logística da sua empresa. Auxiliaremos a estruturação de novos negócios ou melhoria da operação atual mediante o apontamento de benefícios fiscais estaduais, municipais e federais que possam ser utilizados na operação. Faremos todo o processo de requisição do incentivo fiscal junto ao Ente Federativo concedente, bem como o alinhamento dos processos internos da empresa para escrituração contábil e fiscal do benefício.'
         },
@@ -41,14 +41,14 @@ export default function Services() {
         {
             id: 5,
             name: 'Assessoria Mensal',
-            title: <>Assessoria <br/> Mensal</>,
+            title: <>Assessoria <br /> Mensal</>,
             icon: '/assessoria_mensal.svg',
             description: 'É o serviço mais completo prestado pela RV Tributos. A assessoria mensal engloba todos os serviços prestados pela RV, mediante o acompanhamento e fechamento da escrituração fiscal, contábil e tributária da empresa, e inclui reuniões mensais para entender eventuais mudanças na operação, sempre buscando reduzir a carga tributária com eficiência e segurança jurídica.'
         },
         {
             id: 6,
             name: 'Gestão de Passivos',
-            title: <>Gestão <br/>de Passivos</>,
+            title: <>Gestão <br />de Passivos</>,
             icon: '/gestao_passivos.svg',
             description: 'Estruturação de plano de contenção e redução do passivo tributário em aberto da empresa, mediante discussão judicial dos débitos ou por meio de simulação e negociação de transações tributárias.'
         }
@@ -63,40 +63,43 @@ export default function Services() {
     };
 
     return (
-        <SectionLayout name='servicos' className='min-h-section px-6'>
-            <SectionLayout.Header>
+        <SectionLayout name='servicos' className=' min-h-section '>
+            <div className='mx-auto px-10 md:max-w-4xl lg:max-w-6xl xl:max-w-7xl'>
+                <SectionLayout.Header>
                 <SectionLayout.Subtitle className="">
-                   Nossas 
+                    Nossas
                 </SectionLayout.Subtitle>
                 <SectionLayout.Title>
                     Soluções
                 </SectionLayout.Title>
-                
+
                 <SectionLayout.GradientLine />
+                <div className='w-full'>
+                    <p className="text-center md:text-left text-rv-green font-display text-base md:text-xl max-w-3xl mt-8 mx-auto px-4">
+                        Nosso objetivo é aprimorar a organização fiscal e tributária dos nossos clientes, apontando oportunidades e implementando a melhor estratégia dentro do vasto e complexo cenário das leis fiscais. Por meio de consultoria especializada, planejamento tributário meticuloso e recuperação de impostos, trabalhamos para transformar o “Manicômio Tributário Brasileiro” em uma vantagem competitiva para nossos clientes.
+                    </p>
+                </div>
             </SectionLayout.Header>
 
-            <SectionLayout.Content className="h-full">
+            <SectionLayout.Content className="h-full w-full">
                 {/* Container Principal 
-                   Se activeId existir (clicado), vira Flex Row (lado a lado).
-                   Caso contrário, é apenas um bloco normal que segura o grid.
                 */}
-                <div className={`transition-all duration-500 ease-in-out w-full ${activeId ? 'flex' : ''}`}>
+                <div className={`transition-all duration-500 ease-in-out mx-auto ${activeId ? 'flex' : ''}`}>
 
                     {/* Área dos Botões 
                        Muda de GRID (inicial) para FLEX COLUNA (lateral) quando ativo
                     */}
-                    <div className={`transition-all duration-500 ease-in-out ${
-                        activeId 
-                        ? 'w-1/4 flex flex-col py-3'
-                        : 'w-full grid grid-cols-2 grid-rows-3 gap-6 max-w-3xl mx-auto' // Estado Inicial: Grid centralizado
-                    }`}>
+                    <div className={`transition-all duration-500 ease-in-out ${activeId
+                            ? 'w-1/4 flex flex-col py-3 max-w-20'
+                            : 'w-full grid grid-cols-2 grid-rows-3 gap-6 mx-auto' // Estado Inicial: Grid centralizado
+                        }`}>
                         {services.map((service) => {
                             const isActive = activeId === service.id;
                             const isAnyActive = activeId !== null;
 
                             return (
-                                <div 
-                                    key={service.id} 
+                                <div
+                                    key={service.id}
                                     className={`flex flex-col items-center transition-all duration-500 
                                         ${isAnyActive && !isActive ? 'opacity-50 scale-90' : 'opacity-100 scale-100'}
                                     `}
@@ -121,7 +124,7 @@ export default function Services() {
                                     </button>
 
                                     {/* Título abaixo do botão */}
-                                    <p className={`text-rv-green ${activeId ? `hidden`:`visible`} font-display font-bold text-center transition-all duration-300 ${activeId ? 'text-[0.6rem]' : 'text-[clamp(1rem,3.5vw,2rem)]'}`}>
+                                    <p className={`text-rv-green ${activeId ? `hidden` : `visible`} font-display font-bold text-center transition-all duration-300 ${activeId ? 'text-[0.6rem]' : 'text-[clamp(1rem,3.5vw,2rem)]'}`}>
                                         {service.title}
                                     </p>
                                 </div>
@@ -139,7 +142,7 @@ export default function Services() {
                                 return (
                                     <div key={service.id} className="bg-rv-yellow rounded-xl p-4 h-full ">
                                         <div className="w-full flex justify-end mb-2">
-                                            <button 
+                                            <button
                                                 onClick={handleCloseService}
                                                 className="bg-rv-green text-rv-white w-8 h-8 rounded-md flex items-center justify-center font-bold hover:scale-110 transition-transform shadow-md"
                                                 aria-label="Fechar"
@@ -160,6 +163,8 @@ export default function Services() {
                     )}
                 </div>
             </SectionLayout.Content>
+            </div>
+            
         </SectionLayout>
     );
 }

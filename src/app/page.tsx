@@ -3,7 +3,7 @@ import HeaderRender from "@/components/header/HeaderRender";
 import HeroMobile from "@/components/main/hero/Hero";
 import Contact from "@/components/main/sections/Contact";
 import Expertises from "@/components/main/sections/Expertises";
-import Feedbacks from "@/components/main/sections/Feedbacks";
+import Feedbacks from "@/components/main/sections/feedbacks/Feedbacks";
 import Services from "@/components/main/sections/Services";
 
 export default function Home() {
