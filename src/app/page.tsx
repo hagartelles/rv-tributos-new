@@ -6,18 +6,27 @@ import Contact from "@/components/main/sections/Contact";
 import Expertises from "@/components/main/sections/expertises/Expertises";
 import Feedbacks from "@/components/main/sections/feedbacks/Feedbacks";
 import Services from "@/components/main/sections/servicesOffered/Services";
+import ScrollReveal from "@/ui/ScrollReveal"; 
 
 export default function Home() {
   return (
-  <>
-    <HeaderRender/>
-    <Hero/>
-    <Expertises/>
-    <Services/>
-    <About/>
-    <Feedbacks/>
-    <Contact/>
-    <Footer/>
-  </>
+    <>
+      <HeaderRender />
+      <Hero />
+      <ScrollReveal direction="left">
+        <Expertises />
+      </ScrollReveal>
+      <ScrollReveal direction="right">
+        <Services />
+      </ScrollReveal>
+      <ScrollReveal direction="left">
+        <About />
+      </ScrollReveal>
+      <ScrollReveal direction="right">
+        <Feedbacks />
+      </ScrollReveal>
+        <Contact />
+        <Footer />
+    </>
   );
 }

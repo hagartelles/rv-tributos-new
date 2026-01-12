@@ -17,9 +17,9 @@ export const socialLinks = [
 ];
 
 export const footerLinks = [
-    { label: 'Início', href: '/' },
-    { label: 'Quem Somos', href: '/sobre' },
-    { label: 'Serviços', href: '/servicos' },
+    { label: 'Início', href: '#inicio' },
+    { label: 'Quem Somos', href: '#sobre' },
+    { label: 'Serviços', href: '#servicos' },
 ];
 
 export const companyData = {
