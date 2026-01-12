@@ -108,8 +108,7 @@ export default function Footer() {
                             <p className="text-rv-white font-display text-[clamp(0.75rem,3vw,0.875rem)] font-medium leading-relaxed opacity-90">
                                 {companyData.companyName} <br/> 
                                 {companyData.companyId} <br />
-                                {companyData.address},{companyData.city} - {companyData.stateAbbreviation}<br />
-                                {companyData.postalCode}
+                                {companyData.city} - {companyData.stateAbbreviation}<br />
                             </p>
                         </div>
                     </div>
