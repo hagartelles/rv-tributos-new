@@ -41,7 +41,7 @@ export default function Feedbacks() {
     const isCarousel = testimonials.length > 3;
 
     return (
-        <SectionLayout className='px-10 bg-linear-to-b from-rv-white to-[#c4c4c4]' name='feedbacks'>
+        <SectionLayout className='bg-linear-to-b from-rv-white to-[#c4c4c4]' name='feedbacks' showWatermark={false}>
             <SectionLayout.Container>
                 <SectionLayout.Header className='mb-10'>
                     <SectionLayout.Title>

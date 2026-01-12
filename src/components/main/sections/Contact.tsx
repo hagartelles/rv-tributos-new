@@ -2,6 +2,7 @@
 
 import Link from 'next/link';
 import Image from 'next/image';
+import { WHATSAPP_LINK } from '@/constants';
 
 export default function Contact() {
     return (
@@ -20,7 +21,7 @@ export default function Contact() {
                     {/* CTA Button Container */}
                     <div className="inline-block w-full text-center md:w-auto">
                         <Link
-                            href="/contato"
+                            href={WHATSAPP_LINK}
                             className="group relative inline-flex items-center justify-center shadow-[0_6px_12px_rgba(0,0,0,0.3)] transition-transform duration-300 ease-in-out hover:scale-105 transform-gpu will-change-transform antialiased"
                             style={{
                                 fontSize: '1.25rem',

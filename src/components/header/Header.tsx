@@ -3,9 +3,12 @@
 import { useState } from 'react';
 import Image from 'next/image';
 import Link from 'next/link';
+import { WHATSAPP_LINK } from '@/constants';
 
 export default function Header() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
+
+  const whatsAppLink = WHATSAPP_LINK
 
   const toggleMenu = () => {
     setIsMenuOpen(!isMenuOpen);
@@ -16,7 +19,7 @@ export default function Header() {
     { label: 'Nosso Público', href: '#nosso-publico' },
     { label: 'Serviços', href: '#servicos' },
     { label: 'Sobre nós', href: '#sobre' },
-    { label: 'Contato', href: '' },
+    { label: 'Contato', href: whatsAppLink },
   ];
 
   return (
@@ -25,7 +28,7 @@ export default function Header() {
       <header className="fixed top-0 left-0 right-0 z-50 bg-rv-green rv-menu-shadow h-header">
         <div className="flex items-center justify-between h-full px-4 sm:px-5">
           {/* Logo */}
-          <Link href="/" className="flex items-center" onClick={() => setIsMenuOpen(false)}>
+          <Link href="#inicio" className="flex items-center" onClick={() => setIsMenuOpen(false)}>
             <Image
               src="/logo.png"
               alt="RV Tributos"

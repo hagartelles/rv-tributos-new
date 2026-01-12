@@ -1,0 +1,1 @@
+export const WHATSAPP_LINK = "https://wa.me/5511999999999?text=Oi%20quero%20saber%20mais%20sobre%20o%20planejamento%20tribut%C3%A1rio%20que%20a%20RV%20Tributos%20oferece%21";

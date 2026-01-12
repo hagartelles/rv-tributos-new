@@ -4,6 +4,7 @@ import { useState } from 'react';
 import Image from 'next/image';
 import Link from 'next/link';
 import { usePathname } from 'next/navigation';
+import { WHATSAPP_LINK } from '@/constants';
 
 export default function HeaderDesktop() {
   const pathname = usePathname();
@@ -24,7 +25,7 @@ export default function HeaderDesktop() {
         <div className="flex items-center justify-between py-3 md:py-4">
           {/* Logo - Responsivo por tamanho de tela */}
           <Link 
-            href="/" 
+            href="#inicio" 
             className="flex items-center transition-transform hover:scale-105 duration-300"
           >
             <Image
@@ -66,7 +67,7 @@ export default function HeaderDesktop() {
 
             {/* CTA Button - Ajusta tamanho */}
             <Link
-              href="/contato"
+              href={WHATSAPP_LINK}
               className="ml-2 md:ml-4 px-4 py-2 md:px-6 md:py-3 bg-rv-yellow text-rv-green font-display font-bold text-sm md:text-base rounded-full transition-all duration-300 hover:bg-rv-white hover:shadow-lg hover:scale-105 active:scale-95"
             >
               Contato
