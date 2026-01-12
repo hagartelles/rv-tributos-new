@@ -11,7 +11,7 @@ export default function Hero() {
     return (
         <section id='inicio' className="relative h-hero-section w-full overflow-hidden mt-(--header-height)">
             {/* Background */}
-            <div className="relative h-full w-full">
+            <div className="relative h-full w-full overflow-hidden">
                 <Image
                     src={data.images.background}
                     alt="Background"
@@ -22,25 +22,19 @@ export default function Hero() {
                 <div className="absolute inset-0 bg-rv-black/40" />
                 <div className="absolute inset-0 bg-linear-to-b from-transparent via-transparent to-rv-green/40" />
 
-                {/* --- VERDE MOBILE --- */}
-                <div className={`md:hidden absolute top-0 left-0 bg-rv-green/50 transition-transform duration-1000 ease-out z-10 ${isLoaded ? 'translate-y-0 translate-x-0' : '-translate-y-full translate-x-full '}`} style={{ width: '85%', height: '40%', clipPath: 'polygon(0 0, 100% 0, 0 100%)' }}>
-                    <div className={`absolute flex items-center h-2/3 w-2/3 pl-5 transition-opacity duration-700 delay-1000 ${isLoaded ? 'opacity-100' : 'opacity-0'}`}>
-                        <p className="text-rv-yellow font-display text-2xl font-bold leading-tight">
-                            {data.text.greenTagline}
-                        </p>
-                    </div>
-                </div>
+                {/* --- SETA VERDE --- */}
+                <div className={`absolute transition-transform duration-1000 ease-out ${isLoaded ? 'translate-y-0' : '-translate-y-full'} w-110 h-110 -top-36 -left-10 md:w-200 md:h-200 md:-top-60 md:left-0 lg:w-250 lg:h-250 lg:-top-70 xl:-top-50 xl:left-20 overflow-hidden`}>
+                    <div className="relative w-full h-full overflow-hidden">
+                        <Image
+                            src={data.images.setaVerde}
+                            alt=""
+                            fill
+                            className="object-contain object-top-left"
+                        />
 
-                {/* --- VERDE DESKTOP --- */}
-                <div className={`hidden md:block absolute z-10 transition-transform duration-1000 ease-out ${isLoaded ? 'translate-y-0' : '-translate-y-full'}
-                                md:w-[90%] md:h-[90%] md:-top-60 md:left-[1%]
-                                lg:w-[90%] lg:h-[90%] lg:-top-50 lg:left-20
-                                xl:w-full xl:h-full xl:-top-50 xl:left-20
-                                `}>
-                    <div className="relative w-full h-full">
-                        <Image src={data.images.setaVerde} alt="" fill className="object-contain object-top-left" />
-                        <div className={`absolute top-100 left-20 w-[75%] transition-opacity duration-700 delay-1000 ${isLoaded ? 'opacity-100' : 'opacity-0'} pt-6 pl-6`}>
-                            <p className="text-rv-yellow max-w-2/3 font-display font-bold leading-tight md:text-2xl lg:text-3xl xl:text-4xl">
+                        {/* Texto dentro da Seta */}
+                        <div className={`absolute w-full transition-opacity duration-700 delay-1000 ${isLoaded ? 'opacity-100' : 'opacity-0'} pt-6 pl-6 top-45 left-8 md:top-90 md:left-20 lg:top-110 lg:left-24 xl:top-100 xl:left-20`}>
+                            <p className="text-rv-yellow max-w-2/3 font-display font-bold leading-tight text-xl md:text-3xl lg:text-4xl xl:text-5xl">
                                 {data.text.greenTagline}
                             </p>
                         </div>
@@ -48,11 +42,7 @@ export default function Hero() {
                 </div>
 
                 {/* --- SETA AMARELO --- */}
-                <div className={`absolute transition-transform duration-1000 ease-out z-10 overflow-visible
-                    top-[2%] -right-6 w-full h-[85%] 
-                    md:w-[80%] md:h-[80%] md:top-20 md:right-0
-                    lg:right-20                    
-                    ${isLoaded ? 'translate-y-0 translate-x-0' : 'translate-y-[150%] -translate-x-[150%]'}
+                <div className={`absolute transition-transform duration-1000 ease-out  overflow-hidden pointer-events-none top-5 -right-4 w-130 h-130 md:w-200 md:h-200 md:top-10 md:-right-8 ${isLoaded ? 'translate-y-0 translate-x-0' : 'translate-y-[150%] -translate-x-[150%]'}
                 `}>
                     <div className="relative w-full h-full">
                         <Image
@@ -63,30 +53,30 @@ export default function Hero() {
                             style={{ transform: 'rotate(2deg)' }}
                         />
                     </div>
-
-                    <div className={`absolute inset-0 flex flex-col items-end justify-start transition-opacity duration-700 delay-1000 pr-[10%] pt-[30%] md:right-0 md:left-10 md:pt-50 md:pr-10 ${isLoaded ? 'opacity-100' : 'opacity-0'}`}>
-                        <div className="flex flex-col items-end text-right w-full max-w-3xs md:max-w-3xs">
-                            <p className="text-rv-green font-display font-semibold text-[clamp(1rem,4vw,1.25rem)] md:text-2xl">
+                    {/* --- SETA AMARELO - CONTEÚDO --- */}
+                    <div className={`absolute inset-0 flex flex-col items-end justify-start transition-opacity duration-700 delay-1000 right-7 pt-30 md:right-16 md:pt-55 ${isLoaded ? 'opacity-100' : 'opacity-0'}`}>
+                        <div className="flex flex-col items-end text-right w-full max-w-3xs md:max-w-3xs xl:max-w-sm">
+                            <p className="text-rv-green font-display font-semibold text-[clamp(1rem,4vw,1.25rem)] md:text-2xl xl:text-3xl leading-none">
                                 {data.text.yellowTagline.prefix}
                             </p>
 
                             <div className="flex gap-1 mb-1 mt-1 md:gap-2">
                                 <div className="border-2 border-rv-green rounded-lg px-[0.4rem] py-1 min-w-12 flex justify-center">
-                                    <span className="text-rv-green font-display font-bold leading-none text-[clamp(2rem,8vw,2.5rem)] md:text-3xl">{tens}</span>
+                                    <span className="text-rv-green font-display font-bold leading-none text-[clamp(1.5rem,8vw,2.5rem)] md:text-3xl xl:text-4xl">{tens}</span>
                                 </div>
                                 <div className="border-2 border-rv-green rounded-lg px-[0.4rem] py-1 min-w-12 flex justify-center">
-                                    <span className="text-rv-green font-display font-bold leading-none text-[clamp(2rem,8vw,2.5rem)] md:text-3xl">{units}</span>
+                                    <span className="text-rv-green font-display font-bold leading-none text-[clamp(1.5rem,8vw,2.5rem)] md:text-3xl xl:text-4xl">{units}</span>
                                 </div>
                             </div>
 
                             <span className="text-rv-green font-display font-bold leading-none text-[clamp(1.5rem,6vw,2rem)] md:text-3xl xl:text-4xl">
                                 {data.text.yellowTagline.suffix}
                             </span>
-                            <p className="text-rv-green font-display font-semibold underline decoration-2 underline-offset-4 mb-2 md:text-2xl ">
+                            <p className="text-rv-green font-display font-semibold underline decoration-2 underline-offset-2 mb-1 text-[clamp(1rem,4vw,1.25rem)] md:text-2xl xl:text-3xl">
                                 {data.text.yellowTagline.subSuffix}
                             </p>
 
-                            <Link href={WHATSAPP_LINK} className="bg-rv-green text-rv-white font-display text-base px-4 py-2 rounded-lg shadow-lg transition-all duration-300 hover:bg-rv-greenMusgo hover:scale-105 active:scale-95 ">
+                            <Link href={WHATSAPP_LINK} className="bg-rv-green text-rv-white font-display text-sm md:text-base xl:text-xl mt-1 p-2 rounded-lg shadow-lg transition-all duration-300 hover:bg-rv-greenMusgo hover:scale-105 active:scale-95 pointer-events-auto">
                                 {data.text.yellowTagline.buttonText}
                             </Link>
                         </div>
@@ -94,15 +84,15 @@ export default function Hero() {
                 </div>
 
                 {/* --- RODAPÉ --- */}
-                <div className="absolute bottom-20 md:bottom-30 left-0 right-0 h-[30%] flex md:w-full items-end justify-center z-0">
+                <div className="absolute bottom-5 md:bottom-20 left-0 right-0 flex md:w-full items-end justify-center">
                     <div className="text-left px-6 md:text-center md:max-w-4xl">
-                        <p className="text-rv-white font-display text-4xl">
+                        <p className="text-rv-white font-display text-base md:text-4xl">
                             {data.text.welcome}
                         </p>
-                        <h1 className="text-rv-yellow font-italianno leading-none text-9xl ">
+                        <h1 className="text-rv-yellow font-italianno leading-none text-7xl md:text-9xl ">
                             {data.text.mainTitle}
                         </h1>
-                        <p className="text-rv-white font-display max-w-3/4 text-lg md:max-w-2xl md:mx-auto lg:text-xl md:px-11 leading-tight">
+                        <p className="text-rv-white font-display max-w-3/4 text-base md:text-lg md:max-w-2xl md:mx-auto lg:text-xl md:px-11 leading-tight">
                             {data.text.description}
                         </p>
                     </div>

@@ -8,7 +8,7 @@ export const aboutData = {
     ],
     images: {
         background: '/background.webp',
-        logo: '/logo.png',
+        logo: '/logo-section-sobre.png',
         logoAlt: 'Logo RV Tributos'
     }
 };

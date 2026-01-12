@@ -3,19 +3,24 @@
 import Image from 'next/image';
 import Section from '@/ui/SectionLayout'; 
 import { aboutData } from './aboutData';
+import ScrollReveal from '@/ui/ScrollReveal'; // <--- Importe aqui
 
 export default function About() {
     return (
         <Section name="sobre">
-            {/* 1. Container do Título */}
+            {/* 1. Container do Título (Animado) */}
             <Section.Container>
-                <Section.Header>
-                    <Section.Title>{aboutData.title}</Section.Title>
-                    <Section.GradientLine className='mb-10'/>
-                </Section.Header>
+                <ScrollReveal direction="left">
+                    <Section.Header>
+                        <Section.Title>{aboutData.title}</Section.Title>
+                        <Section.GradientLine className='mb-10'/>
+                    </Section.Header>
+                </ScrollReveal>
             </Section.Container>
 
-            {/* 2. Faixa de Imagem Full-Width (Parallax) */}
+            {/* 2. Faixa de Imagem Full-Width (Parallax) 
+                NÃO coloque ScrollReveal aqui, senão o bg-fixed quebra! 
+            */}
             <div 
                 className="w-full h-100 mt-8 relative bg-fixed bg-center bg-cover bg-no-repeat"
                 style={{ backgroundImage: `url('${aboutData.images.background}')` }}
@@ -25,35 +30,38 @@ export default function About() {
 
                 {/* Container para alinhar a Logo na grid */}
                 <div className="mx-auto px-10 md:max-w-4xl lg:max-w-6xl xl:max-w-7xl h-full flex items-center relative z-20">
-                    <div className="relative w-64 h-32 md:w-72 md:h-60">
+                    {/* Podemos animar a logo aparecendo, pois é um elemento filho, não o container do background */}
+                    <ScrollReveal direction="left" className="relative w-64 h-64 md:w-88 md:h-88">
                         <Image 
                             src={aboutData.images.logo} 
                             alt={aboutData.images.logoAlt} 
                             fill 
                             className="object-contain object-left" 
                         />
-                    </div>
+                    </ScrollReveal>
                 </div>
             </div>
 
-            {/* 3. Conteúdo de Texto */}
+            {/* 3. Conteúdo de Texto (Animado) */}
             <Section.Container>
                 <Section.Content className="mt-12 px-6">
-                    <div className="flex flex-col gap-6 text-rv-green">
-                        
-                        <h3 className="font-display text-3xl md:text-4xl font-bold">
-                            {aboutData.subtitle}
-                        </h3>
+                    <ScrollReveal direction="left">
+                        <div className="flex flex-col gap-6 text-rv-green">
+                            
+                            <h3 className="font-display text-3xl md:text-4xl font-bold">
+                                {aboutData.subtitle}
+                            </h3>
 
-                        <div className="text-lg leading-relaxed space-y-6 text-justify md:text-left font-base">
-                            {aboutData.text.map((paragraph, index) => (
-                                <p key={index}>
-                                    {paragraph}
-                                </p>
-                            ))}
+                            <div className="text-lg leading-relaxed space-y-6 text-justify md:text-left font-base">
+                                {aboutData.text.map((paragraph, index) => (
+                                    <p key={index}>
+                                        {paragraph}
+                                    </p>
+                                ))}
+                            </div>
+
                         </div>
-
-                    </div>
+                    </ScrollReveal>
                 </Section.Content>
             </Section.Container>
         </Section>
