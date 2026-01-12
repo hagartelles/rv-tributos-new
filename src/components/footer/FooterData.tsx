@@ -25,8 +25,8 @@ export const footerLinks = [
 ];
 
 export const companyData = {
-    phoneDisplay: '(47)3842-3941',
-    phoneHref: 'tel:+554738423941',
+    phoneDisplay: '(47) 3180-4011',
+    phoneHref: 'tel:+554731804011',
     companyName:'ROZIN & VIESA CONSULTORIA EMPRESARIAL LTDA',
     companyId: '52.321.958/0001-88',
     address: ' R MARIA DAS DORES SANTOS MULLER, 289, PRAIA BRAVA',
