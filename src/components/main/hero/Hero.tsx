@@ -14,7 +14,7 @@ export default function Hero() {
             <div className="relative h-full w-full overflow-hidden">
                 <Image
                     src={data.images.background}
-                    alt="Background"
+                    alt="Escritório corporativo, moderno e profissional da RV Tributos"
                     fill
                     className="object-cover"
                     priority

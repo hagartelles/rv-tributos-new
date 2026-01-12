@@ -30,7 +30,7 @@ export default function HeaderDesktop() {
           >
             <Image
               src="/logo.png"
-              alt="RV Tributos"
+              alt="Logotipo oficial da RV Tributos Consultoria Tributária"
               width={180}
               height={60}
               priority

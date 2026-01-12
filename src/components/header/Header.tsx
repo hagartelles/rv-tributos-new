@@ -31,7 +31,7 @@ export default function Header() {
           <Link href="#inicio" className="flex items-center" onClick={() => setIsMenuOpen(false)}>
             <Image
               src="/logo.png"
-              alt="RV Tributos"
+              alt="Logotipo oficial da RV Tributos Consultoria Tributária"
               width={120}
               height={40}
               priority

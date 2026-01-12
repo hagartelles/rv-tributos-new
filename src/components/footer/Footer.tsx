@@ -22,7 +22,7 @@ export default function Footer() {
                         <div className="flex justify-center mb-6">
                             <Image
                                 src="/logo.png"
-                                alt="RV Tributos"
+                                alt="Logotipo oficial da RV Tributos Consultoria Tributária"
                                 width={300}
                                 height={150}
                                 className="w-auto"
@@ -106,8 +106,10 @@ export default function Footer() {
                         {/* Dados da Empresa (Importados) */}
                         <div className=" px-4 mb-2 max-w-3xl mx-auto lg:w-full ">
                             <p className="text-rv-white font-display text-[clamp(0.75rem,3vw,0.875rem)] font-medium leading-relaxed opacity-90">
-                                {companyData.addressLine1}<br />
-                                {companyData.addressLine2}
+                                {companyData.companyName} <br/> 
+                                {companyData.companyId} <br />
+                                {companyData.address},{companyData.city} - {companyData.stateAbbreviation}<br />
+                                {companyData.postalCode}
                             </p>
                         </div>
                     </div>

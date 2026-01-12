@@ -56,7 +56,7 @@ export default function Expertises() {
                                         ${isOpen ? 'w-full z-0' : 'w-2/5 z-10'}
                                         ${isEven ? 'left-0' : 'right-0'}
                                     `}>
-                                        <Image src={service.mobileImage} alt={service.title} fill className="object-cover" />
+                                        <Image src={service.mobileImage} alt={service.alt} fill className="object-cover" />
                                         <div className={`absolute inset-0 bg-black/50 transition-opacity duration-500 ${isOpen ? 'opacity-100' : 'opacity-0'}`}></div>
                                     </div>
 

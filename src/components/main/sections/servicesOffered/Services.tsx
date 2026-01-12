@@ -69,7 +69,7 @@ export default function Services() {
                                             <div className={`relative transition-all duration-300 ${activeId ? 'w-8 h-8' : 'w-12 h-12'}`}>
                                                 <Image
                                                     src={service.icon}
-                                                    alt={service.name}
+                                                    alt={service.alt}
                                                     fill
                                                     className="object-contain"
                                                 />

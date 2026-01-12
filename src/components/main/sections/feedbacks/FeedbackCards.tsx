@@ -8,6 +8,7 @@ interface FeedbackCardProps {
         text: string;
         author: string;
         position: string;
+        alt: string;
         logo: string;
     };
 }
@@ -20,7 +21,7 @@ export default function FeedbackCard({ data }: FeedbackCardProps) {
                 <div className="w-20 h-20 rounded-full overflow-hidden relative ">
                     <Image
                         src={data.logo}
-                        alt={data.author}
+                        alt={data.alt}
                         fill
                         className="object-contain"
                     />

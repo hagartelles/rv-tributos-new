@@ -9,6 +9,6 @@ export const aboutData = {
     images: {
         background: '/background.webp',
         logo: '/logo-section-sobre.png',
-        logoAlt: 'Logo RV Tributos'
+        logoAlt: 'Logotipo oficial da RV Tributos Consultoria Tributária'
     }
 };

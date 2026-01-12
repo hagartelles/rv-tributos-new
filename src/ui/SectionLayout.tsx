@@ -91,7 +91,7 @@ SectionLayout.Header = function SectionHeader({ children, className = '', showCo
                     >
                         <Image
                             src="/bussula-dourada.png"
-                            alt=""
+                            alt="Bússola dourada simbolizando a direção certa para seus negócios"
                             className="object-contain w-full h-full"
                             width={200}
                             height={200}
@@ -106,7 +106,7 @@ SectionLayout.Header = function SectionHeader({ children, className = '', showCo
                     <div className="md:hidden absolute -top-10 -translate-x-11/12 w-40 h-40 pointer-events-none select-none">
                          <Image
                             src="/bussula-dourada.png"
-                            alt=""
+                            alt="Bússola dourada simbolizando a direção certa para seus negócios"
                             className="object-contain w-full h-full"
                             width={120}
                             height={120}

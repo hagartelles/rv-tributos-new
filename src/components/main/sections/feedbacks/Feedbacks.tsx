@@ -11,21 +11,24 @@ export default function Feedbacks() {
             text: 'A Freitas agradece à RV Tributos pela parceria e pelo excelente trabalho de consultoria e recuperação tributária realizado ao longo dos últimos anos. A atuação técnica e dedicada da equipe contribuiu de forma significativa para a otimização fiscal e o fortalecimento da gestão tributária da nossa empresa.',
             author: 'Marlene Freitas',
             position: 'VP Operações Freitas Comex',
-            logo: '/freitas-logo.png'
+            logo: '/freitas-logo.png',
+            alt:"Logotipo da empresa parceira Freitas"
         },
         {
             id: 2,
             text: 'Nós, em nome da AGF Portas e rodapés ltda. escrevemos esse texto com o intuito de compartilhar a efetividade e a satisfação da nossa empresa com os serviços prestados pela RV Tributos. Foram ágeis e profissionais em atender nossa demanda e em questão de semanas já estavamos usufruindo dos resultados pelos bons serviços prestados. Continuaremos a relação comercial firmada e recomendamos para quem busca serviços tributários de qualidade.',
             author: 'Vinícius Corrêa',
             position: 'AGF - Diretor Financeiro',
-            logo: '/agf-logo.png'
+            logo: '/agf-logo.png',
+            alt:"Logotipo da empresa parceira AGF"
         },
         {
             id: 3,
             text: 'A Freitas agradece à RV Tributos pela parceria e pelo excelente trabalho de consultoria e recuperação tributária realizado ao longo dos últimos anos. A atuação técnica e dedicada da equipe contribuiu de forma significativa para a otimização fiscal e o fortalecimento da gestão tributária da nossa empresa.',
             author: 'Marlene Freitas',
             position: 'VP Operações Freitas Comex',
-            logo: '/freitas-logo.png'
+            logo: '/freitas-logo.png',
+            alt:"Logotipo da empresa parceira AGF"
         },
 
         {
@@ -33,7 +36,8 @@ export default function Feedbacks() {
             text: 'Teste de feedback extra para ativar o carrossel.',
             author: 'Cliente Teste',
             position: 'Diretor',
-            logo: '/freitas-logo.png'
+            logo: '/freitas-logo.png',
+            alt:"Logotipo da empresa parceira AGF"
         },
 
     ];
