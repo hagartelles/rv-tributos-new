@@ -41,8 +41,8 @@ export default function Hero() {
                     </div>
                 </div>
 
-                {/* --- SETA AMARELO --- */}
-                <div className={`absolute transition-transform duration-1000 ease-out  overflow-hidden pointer-events-none top-5 -right-4 w-130 h-130 md:w-200 md:h-200 md:top-10 md:-right-8 ${isLoaded ? 'translate-y-0 translate-x-0' : 'translate-y-[150%] -translate-x-[150%]'}
+                {/* --- SETA AMARELA --- */}
+                <div className={`absolute transition-transform duration-1000 ease-out  overflow-hidden pointer-events-none top-5 -right-6 w-120 h-120 md:w-200 md:h-200 md:top-10 md:-right-8 ${isLoaded ? 'translate-y-0 translate-x-0' : 'translate-y-[150%] -translate-x-[150%]'}
                 `}>
                     <div className="relative w-full h-full">
                         <Image
