@@ -1,5 +1,5 @@
 import { useState, useEffect, useRef } from 'react';
-import { servicesData } from './ExpertisesData';
+import { servicesData } from './expertisesData';
 
 export function useExpertises() {
     const [currentIndex, setCurrentIndex] = useState(0);

@@ -4,7 +4,7 @@ import { useState } from 'react';
 import Image from 'next/image';
 import SectionLayout from '@/ui/SectionLayout';
 import CloseButton from '@/ui/CloseButton';
-import { servicesList, servicesText } from './ServicesData'; 
+import { servicesList, servicesText } from './servicesData'; 
 
 export default function Services() {
     // 1. Estado para controlar qual serviço foi clicado

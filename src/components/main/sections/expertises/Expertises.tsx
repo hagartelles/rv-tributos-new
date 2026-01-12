@@ -5,7 +5,7 @@ import Link from 'next/link';
 import Section from '@/ui/SectionLayout';
 import CloseButton from '@/ui/CloseButton';
 import { WHATSAPP_LINK } from '@/constants/index';
-import { useExpertises } from './UseExpertises'; 
+import { useExpertises } from './useExpertises'; 
 
 export default function Expertises() {
     const { 
@@ -68,9 +68,19 @@ export default function Expertises() {
                                             relative w-fit mb-3 transition-all duration-500
                                             ${isOpen ? 'mb-0 ml-8' : 'mx-auto'}
                                         `}>
+                                            
+                                            {/* SETA AMARELA MOBILE */}
+                                            {/* AQUI ESTÁ A CORREÇÃO DA SOMBRA: */}
                                             <div
-                                                className="absolute -left-9 top-1/2 -translate-y-1/2 w-8 h-8 z-20 pointer-events-none"
-                                                style={{ filter: 'drop-shadow(2px 3px 2px rgba(0,0,0,0.4))' }}
+                                                className={`
+                                                    absolute top-1/2 -translate-y-1/2 w-8 h-8 z-20 pointer-events-none transition-all duration-300
+                                                    ${isEven ? '-left-10' : '-right-10 rotate-180'}
+                                                `}
+                                                style={{ 
+                                                    filter: isEven 
+                                                        ? 'drop-shadow(2px 3px 2px rgba(0,0,0,0.4))'   // Normal
+                                                        : 'drop-shadow(-2px -3px 2px rgba(0,0,0,0.4))' // Invertido para compensar a rotação
+                                                }}
                                             >
                                                 <Image src="/seta_amarela_dir.png" alt="" fill className="object-contain" />
                                             </div>
@@ -148,7 +158,7 @@ export default function Expertises() {
                 </div>
 
                 {/* ============================================================
-                    VERSÃO DESKTOP
+                    VERSÃO DESKTOP (Mantida Inalterada)
                    ============================================================ */}
                 <div 
                     ref={desktopContainerRef}
@@ -250,7 +260,7 @@ export default function Expertises() {
                                             {services[currentIndex].longDescription}
                                         </p>
                                         {/* CTA Button */}
-                                        <div className="inline-block w-full text-center md:w-auto mt-4">
+                                        <div className="inline-block w-full text-center md:w-auto mt-4 cursor-pointer">
                                             <Link
                                                 href={WHATSAPP_LINK}
                                                 className="group relative inline-flex items-center justify-center transition-transform duration-300 ease-in-out hover:scale-105 transform-gpu will-change-transform antialiased"
@@ -274,7 +284,9 @@ export default function Expertises() {
                             </div>
                         </div>
                     </div>
+
                 </div>
+
             </Section.Content>
         </Section>
     );

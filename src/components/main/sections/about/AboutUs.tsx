@@ -2,7 +2,7 @@
 
 import Image from 'next/image';
 import Section from '@/ui/SectionLayout'; 
-import { aboutData } from './AboutData';
+import { aboutData } from './aboutData';
 
 export default function About() {
     return (
