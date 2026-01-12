@@ -103,13 +103,13 @@ SectionLayout.Header = function SectionHeader({ children, className = '', showCo
             {/* COLUNA 2: Conteúdo (Texto) */}
             <div className="text-center md:text-left relative z-10">
                 {showCompass && (
-                    <div className="md:hidden absolute -top-16 -translate-x-4/5 w-56 h-56 pointer-events-none select-none">
+                    <div className="md:hidden absolute -top-10 -translate-x-11/12 w-40 h-40 pointer-events-none select-none">
                          <Image
                             src="/bussula-dourada.png"
                             alt=""
                             className="object-contain w-full h-full"
-                            width={200}
-                            height={200}
+                            width={120}
+                            height={120}
                         />
                     </div>
                 )}

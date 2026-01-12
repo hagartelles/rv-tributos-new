@@ -61,12 +61,7 @@ export default function Expertises() {
                                     </div>
 
                                     {/* CONTEÚDO (Texto e Título) */}
-                                    <div className={`
-                                        relative flex-1 p-6 flex flex-col justify-center transition-all duration-500
-                                        ${isOpen ? 'w-full items-start z-10' : ''} 
-                                        ${isEven && !isOpen ? 'ml-[40%]' : ''} 
-                                        ${!isEven && !isOpen ? 'mr-[40%]' : ''}
-                                    `}>
+                                    <div className={`relative flex-1 px-6 py-4 flex flex-col transition-all duration-500 ${isOpen ? 'w-full items-start z-10' : ''} ${isEven && !isOpen ? 'ml-[40%]' : ''} ${!isEven && !isOpen ? 'mr-[40%]' : ''}`}>
 
                                         {/* WRAPPER DO TÍTULO */}
                                         <div className={`
