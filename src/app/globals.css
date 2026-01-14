@@ -94,3 +94,15 @@ p {
 section[id], div[id] {
   scroll-margin-top: calc(var(--header-height));
 }
+
+@media (min-width: 1024px) and (max-height: 800px) {
+  html {
+    font-size: 85%;
+  }
+}
+
+@media (min-width: 1024px) and (min-resolution: 1.25dppx) {
+    html {
+        font-size: 90%; 
+    }
+}
