@@ -17,7 +17,7 @@ export default function Feedbacks() {
         {
             id: 2,
             text: 'Nós, em nome da AGF Portas e rodapés ltda. escrevemos esse texto com o intuito de compartilhar a efetividade e a satisfação da nossa empresa com os serviços prestados pela RV Tributos. Foram ágeis e profissionais em atender nossa demanda e em questão de semanas já estavamos usufruindo dos resultados pelos bons serviços prestados. Continuaremos a relação comercial firmada e recomendamos para quem busca serviços tributários de qualidade.',
-            author: 'Vinícius Corrêa',
+            author: 'Vinícius Corrêa & André Pinto',
             position: 'AGF - Diretor Financeiro',
             logo: '/agf-logo.png',
             alt:"Logotipo da empresa parceira AGF"
@@ -30,16 +30,6 @@ export default function Feedbacks() {
             logo: '/freitas-logo.png',
             alt:"Logotipo da empresa parceira AGF"
         },
-
-        {
-            id: 4,
-            text: 'Teste de feedback extra para ativar o carrossel.',
-            author: 'Cliente Teste',
-            position: 'Diretor',
-            logo: '/freitas-logo.png',
-            alt:"Logotipo da empresa parceira AGF"
-        },
-
     ];
 
     const isCarousel = testimonials.length > 3;

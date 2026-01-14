@@ -55,7 +55,7 @@ export const metadata: Metadata = {
     type: 'website',
     images: [
       {
-        url: '/og-image.jpg', // Crie esta imagem (1200x630px) e salve em /public
+        url: '/og-image.jpg',
         width: 1200,
         height: 630,
         alt: 'RV Tributos - Consultoria Especializada',
