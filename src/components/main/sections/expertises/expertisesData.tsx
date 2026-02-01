@@ -12,7 +12,7 @@ export const servicesData = [
         mobileImage: '/mobile/gerente_joia.webp',
         alt:"Gestor fazendo sinal de positivo aprovando o planejamento tributário",
         desktopImage: '/desktop/gerente_joia.webp',
-        description: 'Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat',
+        description: 'Atuação focada em créditos de insumos, classificação fiscal, incentivos produtivos e redução segura da carga tributária industrial.',
         longDescription: 'Detalhes específicos para Indústria. Falamos sobre IPI, ICMS, créditos tributários na compra de insumos e como otimizar a cadeia produtiva para evitar bitributação e garantir conformidade fiscal com máxima eficiência.',
     },
     {

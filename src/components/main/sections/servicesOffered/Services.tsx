@@ -77,9 +77,9 @@ export default function Services() {
                                         </button>
 
                                         {/* Título abaixo do botão */}
-                                        <p className={`text-rv-green ${activeId ? `hidden` : `visible`} font-display font-bold text-center transition-all duration-300 ${activeId ? 'text-[0.6rem]' : 'text-[clamp(1rem,3.5vw,2rem)]'}`}>
+                                        <div className={`text-rv-green ${activeId ? `hidden` : `visible`} font-display font-bold text-center transition-all duration-300 ${activeId ? 'text-[0.6rem]' : 'text-[clamp(1rem,3.5vw,2rem)]'}`}>
                                             {service.title}
-                                        </p>
+                                        </div>
                                     </div>
                                 );
                             })}
