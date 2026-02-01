@@ -70,7 +70,6 @@ export default function Expertises() {
                                         `}>
                                             
                                             {/* SETA AMARELA MOBILE */}
-                                            {/* AQUI ESTÁ A CORREÇÃO DA SOMBRA: */}
                                             <div
                                                 className={`
                                                     absolute top-1/2 -translate-y-1/2 w-8 h-8 z-20 pointer-events-none transition-all duration-300
@@ -125,9 +124,9 @@ export default function Expertises() {
                                                 <p className="text-rv-green text-sm leading-relaxed mb-4">
                                                     {service.description}
                                                 </p>
-                                                <p className="text-rv-green text-sm leading-relaxed">
+                                                <div className="text-rv-green text-sm leading-relaxed">
                                                     {service.longDescription}
-                                                </p>
+                                                </div>
                                                 {/* CTA Button */}
                                                 <div className="inline-block w-full text-center md:w-auto cursor-pointer">
                                                     <Link
@@ -244,7 +243,7 @@ export default function Expertises() {
                                 ref={dropdownRef}
                                 className="container mx-auto px-6 relative flex flex-col md:flex-row gap-8 items-start"
                             >
-                                <div className={`absolute top-6 right-6 transition-opacity duration-300 ${isActived ? 'opacity-100' : 'opacity-0'}`}>
+                                <div className={`absolute top-4 right-6 transition-opacity duration-300 ${isActived ? 'opacity-100' : 'opacity-0'}`}>
                                     <CloseButton onClick={actions.closeDropdown} />
                                 </div>
 
@@ -256,9 +255,9 @@ export default function Expertises() {
                                         <div className="h-1 w-20 bg-rv-green rounded-full mb-4"></div>
                                     </div>
                                     <div className="w-full md:w-2/3 pt-4">
-                                        <p className="text-rv-green text-lg leading-relaxed">
+                                        <div className="text-rv-green text-lg leading-relaxed">
                                             {services[currentIndex].longDescription}
-                                        </p>
+                                        </div>
                                         {/* CTA Button */}
                                         <div className="inline-block w-full text-center md:w-auto mt-4 cursor-pointer">
                                             <Link
